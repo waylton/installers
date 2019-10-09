@@ -73,6 +73,7 @@ function install_prerequisites {
         pkg-config \
         libxml2-dev \
 	tclsh \
+	libsdl2-dev \
 	|| exit 1
 
     # network and security
@@ -270,6 +271,7 @@ function install_ffmpeg {
     --enable-libxml2         ` # enable XML parsing needed for dash demuxing support` \
     --enable-librubberband \
     --enable-opencl \
+    --enable-ffplay \
     $extra_flags \
     || return 1
 
